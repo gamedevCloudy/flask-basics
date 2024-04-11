@@ -1,22 +1,23 @@
-from flask import url_for, Flask
+from flask import request, Flask
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return 'index'
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return 'login'
+    if request.method == 'POST':
+        return "perform login"
+    else:
+        return "return login form in html"
+    
 
-@app.route('/user/<username>')
-def profile(username):
-    return f'{username}\'s profile'
+#uses get/post instead of "route"
+@app.get('/signup')
+def signup_get():
+    return "send the signup form"
 
-with app.test_request_context():
-    print(url_for('index'))
-    print(url_for('login'))
-    print(url_for('login', next='/'))
-    print(url_for('profile', username='John Doe'))
+#sepration of concern, for cleanliness ig
+@app.post('/signup')
+def signup_post():
+    return "perform signup action in the backend"
