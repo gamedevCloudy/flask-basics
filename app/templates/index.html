@@ -19,6 +19,6 @@
   </head>
   <body>
     <h1>HTMX w/Flask</h1>
-    <div hx-get="/profile" hx-trigger="load" hx-swap="innerHTML"></div>
+    {% block content %} {% endblock %}
   </body>
 </html>

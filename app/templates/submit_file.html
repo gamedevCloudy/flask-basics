@@ -1,0 +1,10 @@
+{% extends 'index.html' %} {% block content%}
+<p>hello extension</p>
+<form enctype="multipart/form-data" hx-post="/submit" hx-target="#form-response" hx-swap="innerHTML">
+    <label for="file_name">File Input</label>
+    <input id="file" type="file" name="file"></input>
+    <br>
+    <input type="submit" value="Upload"/>
+</form>
+<pre><code id="form-response"></code></pre>
+{% endblock %}
