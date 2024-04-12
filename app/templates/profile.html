@@ -1,0 +1,10 @@
+<div>
+  <h2>Name: {{ name }}</h2>
+  <p>age: {{ age }}</p>
+  <p>Pet list:</p>
+  <ul>
+    {% for pet in pets: %}
+    <li>{{ pet }}</li>
+    {% endfor %}
+  </ul>
+</div>

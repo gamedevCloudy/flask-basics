@@ -18,12 +18,7 @@
     <script src="https://unpkg.com/htmx.org@1.9.11"></script>
   </head>
   <body>
-    <h1 class="hero_title">HTMX w/Flask</h1>
-    <pre><code  id="form"></code></pre>
-    <button hx-get="/login" hx-target="#form">Get Login</button>
-    <button hx-post="/login" hx-target="#form">Post Login</button>
-    <pre><code  id="signup"></code></pre>
-    <button hx-get="/signup" hx-target="#signup">Get Signup</button>
-    <button hx-post="/signup" hx-target="#signup">Post Signup</button>
+    <h1>HTMX w/Flask</h1>
+    <div hx-get="/profile" hx-trigger="load" hx-swap="innerHTML"></div>
   </body>
 </html>
