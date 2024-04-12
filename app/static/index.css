@@ -7,6 +7,10 @@ body{
     /* justify-content: center; */
 }
 
+#form, #signup{
+    width: 512px;
+}
+
 /* Larger than mobile screen */
 @media (min-width: 40.0rem) { 
     

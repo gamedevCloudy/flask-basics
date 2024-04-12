@@ -15,9 +15,15 @@
       href="{{ url_for('static', filename='favicon.ico')
     }}"
     />
+    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
   </head>
   <body>
     <h1 class="hero_title">HTMX w/Flask</h1>
-    <button>Get</button>
+    <pre><code  id="form"></code></pre>
+    <button hx-get="/login" hx-target="#form">Get Login</button>
+    <button hx-post="/login" hx-target="#form">Post Login</button>
+    <pre><code  id="signup"></code></pre>
+    <button hx-get="/signup" hx-target="#signup">Get Signup</button>
+    <button hx-post="/signup" hx-target="#signup">Post Signup</button>
   </body>
 </html>
